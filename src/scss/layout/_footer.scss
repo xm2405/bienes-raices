@@ -1,0 +1,27 @@
+.site-footer {
+    background-color: $grisOscuro;
+    margin: 0;
+ 
+     
+    .contenedor-footer {
+        padding: 2rem 0;        
+        
+        .navegacion {
+           visibility: visible;
+           opacity: 1;
+           height: auto;
+       }
+          @include tablet {
+              @include grid(2, 2rem);
+              align-items: center;
+          }
+          nav{
+              padding: 0;
+          }
+    }
+    .copyright {
+        
+        color: white;
+        text-align: center;
+    }
+}

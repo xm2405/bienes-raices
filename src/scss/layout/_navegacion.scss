@@ -1,0 +1,79 @@
+.derecha{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    @include tablet{
+        flex-direction: row-reverse ;
+    }
+    .dark-mode{    
+        width: 4rem;
+        margin-top: 2rem;
+        background:none;
+        filter: invert(100%);
+        &:hover{
+            cursor: pointer;
+           
+        }
+        @include tablet{
+            margin: 0 0 1rem 1rem;  
+        }
+    }
+}
+.barra{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     @include tablet{
+         flex-direction: row;
+         justify-content: space-between;
+         align-items: flex-end;
+     }
+}
+
+.navegacion{
+    height: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility .3s ease-in-out, opacity 0.5s linear, height .5s linear;
+    @include tablet{
+        display: flex;
+        align-items: center;
+        
+        opacity: 1;
+        visibility: visible;
+    }
+    a{
+        color: $blanco;
+        text-decoration: none;
+        font-size: 2.2rem;
+        display: block;
+        text-align: center;
+        
+        @include tablet{
+            font-size: 1.8rem;
+            margin-right: 2rem;
+            &:last-of-type{
+                margin-right: 0;
+            }
+        }
+    
+    &:hover {
+        color: rgb(16, 255, 48);
+        }
+    }
+}
+
+.mobile-menu{
+    @include tablet{
+        display: none;
+    }   
+    img{
+        width: 5rem;
+    }
+}
+.mostrar{
+    visibility: visible;
+    opacity: 1;
+    height: auto;
+}
